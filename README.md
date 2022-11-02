@@ -1,2 +1,2 @@
-# c1
+# course_1
 Geek Brains Python Basic
