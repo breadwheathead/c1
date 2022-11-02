@@ -7,18 +7,23 @@
 
 """
 
+# sum_result = 17485588610
+# sum_result = 15392909930
+
+
+def divider(n):
+    sum = 0
+    while n:
+        sum += n % 10
+        n = n // 10
+    return sum
+
 
 def summary(array):
     result = 0
     for num in array:
-        sum = 0
-
-        while num:
-            sum += num % 10
-            num = num // 10
-
-        if not sum % 7:
-            result += sum
+        if not divider(num) % 7:
+            result += num
     return result
 
 
