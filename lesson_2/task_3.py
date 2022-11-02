@@ -8,3 +8,22 @@
 
 """
 
+"""
+3. * (вместо задачи 2) Решить задачу 2 не создавая новый список (как говорят, in place). Эта задача намного серьёзнее,
+чем может сначала показаться.
+
+"""
+
+datalist = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '-5', 'градусов']
+print(id(datalist))
+
+for i in range(len(datalist)):
+    if datalist[i].isdigit():
+        datalist[i] = f'"{datalist[i]:0>2s}"'
+    if datalist[i].startswith(('+', '-')):
+        datalist[i] = f'"{datalist[i][0]}{datalist[i][1:]:0>2s}"'
+
+print(' '.join(datalist))
+print(id(datalist))
+
+
