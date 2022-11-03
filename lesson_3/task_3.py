@@ -17,6 +17,10 @@
 import operator
 
 
+def sort_keys(dictionary):
+    return dict(sorted(dictionary.items(), key=operator.itemgetter(0), reverse=False))
+
+
 def thesaurus(*names):
     dictionar = {}
     for name in names:
@@ -26,7 +30,7 @@ def thesaurus(*names):
         else:
             dictionar[lit] = [name]
 
-    return dict(sorted(dictionar.items(), key=operator.itemgetter(0), reverse=True))
+    return sort_keys(dictionar)
 
 
 if __name__ == '__main__':
