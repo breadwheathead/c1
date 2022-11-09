@@ -17,6 +17,7 @@ def update_sale(args):
     with open('bakery.csv', 'r+', encoding='utf-8') as file:
         file.seek((int(args[0]) * 12) - 12)
         file.write(f"{revenue.replace(',', '.'):<10}")
+    return 0
 
 
 if __name__ == '__main__':

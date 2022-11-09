@@ -16,6 +16,7 @@ def add_sale(args):
     revenue = validator(revenue)
     with open('bakery.csv', 'a', encoding='utf-8') as file:
         file.writelines(list(map(lambda value: f"{value.replace(',', '.'):<10}\n", revenue)))
+    return 0
 
 
 if __name__ == '__main__':
