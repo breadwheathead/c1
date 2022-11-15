@@ -21,12 +21,25 @@ import os
 import operator
 
 
+# эта ф-я относит 100 к группе от 100 до 1000
 def get_key(num):
     result = 10
     while num >= 10:
         num = num // 10
         result *= 10
     return result
+
+
+# эта ф-я относит 100 к группе от 10 до 100
+def get_key_mod(num):
+    result = 1
+    while True:
+        if num // 10:
+            result += 1
+        else:
+            break
+        num //= 10
+    return 10 ** result
 
 
 def show_stat(given_path):
