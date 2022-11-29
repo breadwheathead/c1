@@ -1,6 +1,10 @@
 <<<<<<< .merge_file_a09936
 .idea
+<<<<<<< HEAD
 =======
 .idea
 /lesson_6/nginx_logs.txt
 >>>>>>> .merge_file_a13316
+=======
+/lesson_6/nginx_logs.txt
+>>>>>>> lesson_6
